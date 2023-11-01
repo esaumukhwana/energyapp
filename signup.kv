@@ -1,0 +1,163 @@
+MDScreen:
+	name: "signup"
+
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+
+		MDIconButton:
+			icon: "arrow-left"
+			pos_hint: {"center_y":0.95}
+			user_font_size: "30sp"
+			theme_text_color: "Custom"
+			text_color: rgba(26, 24, 58, 255)
+			on_release:
+				root.manager.transition.direction = "right"
+				root.manager.current = "main"
+
+		MDLabel:
+			text: "H i !"
+			pos_hint: {"center_x": 0.5, "center_y": 0.85}
+			halign: "center"
+			color: rgba(0, 0, 59, 255)
+
+		MDLabel:
+			text: "Create a new account"
+			size_hint_x: 0.85
+			pos_hint: {"center_x":0.5,"center_y": 0.79}
+			halign: "center"
+			color: rgba(135, 135, 135, 255)
+
+		MDFloatLayout:
+			size_hint: .7, 0.07
+			pos_hint: {"center_x":0.5, "center_y":0.68}
+
+			TextInput:
+				hint_text: "Username"
+				size_hint_y: 0.75
+				pos_hint: {"center_x":0.43,"center_y": 0.5}
+				background_color: 1, 1, 1, 0
+				foreground_color: rgba(0,0,59,255)
+				cursor_color: rgba(0,0,59,255)
+				font_size: "14sp"
+				cursor_width: "2sp"
+				multiline: False
+
+
+			MDFloatLayout:
+				pos_hint: {"center_x":0.45,"center_y": 0}
+				size_hint_y: 0.03
+				md_bg_color: rgba(178, 178, 178, 255)
+
+		MDFloatLayout:
+			size_hint: .7, 0.07
+			pos_hint: {"center_x":0.5, "center_y":0.56}
+
+			TextInput:
+				hint_text: "Email"
+				size_hint_y: 0.75
+				pos_hint: {"center_x":0.43,"center_y": 0.5}
+				background_color: 1, 1, 1, 0
+				foreground_color: rgba(0,0,59,255)
+				cursor_color: rgba(0,0,59,255)
+				font_size: "14sp"
+				cursor_width: "2sp"
+				multiline: False
+
+
+			MDFloatLayout:
+				pos_hint: {"center_x":0.45,"center_y": 0}
+				size_hint_y: 0.03
+				md_bg_color: rgba(178, 178, 178, 255)
+
+		MDFloatLayout:
+			size_hint: .7, 0.07
+			pos_hint: {"center_x":0.5, "center_y":0.44}
+
+			TextInput:
+				hint_text: "Password"
+				size_hint_y: 0.75
+				pos_hint: {"center_x":0.43,"center_y": 0.5}
+				background_color: 1, 1, 1, 0
+				foreground_color: rgba(0,0,59,255)
+				cursor_color: rgba(0,0,59,255)
+				font_size: "14sp"
+				cursor_width: "2sp"
+				multiline: False
+				password: True
+
+
+			MDFloatLayout:
+				pos_hint: {"center_x":0.45,"center_y": 0}
+				size_hint_y: 0.03
+				md_bg_color: rgba(178, 178, 178, 255)
+
+		Button: 
+			text: "SIGN UP"
+			size_hint: .66, 0.065
+			pos_hint: {"center_x":0.5, "center_y":0.34}
+			background_color: 0,0,0,0
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "login1"
+			canvas.before:
+				Color:
+					rgb: rgba(52, 0, 231, 255)
+
+				RoundedRectangle:
+					size: self.size
+					pos: self.pos
+					radius: [5]
+
+		MDLabel:
+			text: "O R"
+			color: rgba(52, 0, 231, 255)
+			pos_hint: {"center_y": 0.22}
+			font_size: "13sp"
+			halign: "center"
+
+		MDFloatLayout:
+			md_bg_color: rgba(178, 178, 178, 255)
+			size_hint: 0.3, 0.002
+			pos_hint: {"center_x":0.3, "center_y": 0.218}
+
+		MDFloatLayout:
+			md_bg_color: rgba(178, 178, 178, 255)
+			size_hint: 0.3, 0.002
+			pos_hint: {"center_x":0.7, "center_y": 0.218}
+
+		MDLabel:
+			text: "Socila Media Login"
+			font_size: "13sp"
+			halign: "center"
+			pos_hint: {"center_y": 0.16}
+			color: rgba(135, 133, 193, 255)
+
+		MDGridLayout:
+			cols: 3
+			size_hint: 0.48, .07
+			pos_hint: {"center_x":0.5, "center_y": 0.1}
+
+			Image:
+				source: "google.png"
+
+			Image:
+				source: "facebook.png"
+
+			Image:
+				source: "apple.png"
+
+		MDLabel:
+			text: "Already have an account?"
+			font_size: "11sp"
+			pos_hint: {"center_x":0.68, "center_y":0.04}
+			color: rgba(135, 133, 193, 255)
+
+		MDTextButton:
+			text: "Sign In"
+			font_size: "11sp"
+			pos_hint: {"center_x":0.69, "center_y":0.04}
+			color: rgba(52, 0, 231, 255)
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "login1"
+

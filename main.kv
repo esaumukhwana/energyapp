@@ -1,0 +1,60 @@
+MDScreen:
+	name: "main"
+	MDFloatLayout:
+		md_bg_color: 1, 1, 1, 1
+		Image:
+			source: "location.png"
+			pos_hint: {"center_x": .18, "center_y": 0.95}
+
+		Image:
+			source: "logo.png"
+			size_hint: .8, .8
+			pos_hint: {"center_x": .5, "center_y": 0.65}
+
+		MDLabel:
+			text: "H e l  l o !"
+			pos_hint: {"center_y": 0.38}
+			halign: "center"
+			color: rgba(34, 34, 34, 255)
+
+		MDLabel:
+			text: "Ring Energy is the best application to save your energy consumption"
+			size_hint_x: 0.85
+			pos_hint: {"center_x":0.5,"center_y": 0.3}
+			halign: "center"
+			color: rgba(127, 127, 127, 255)
+
+		Button: 
+			text: "LOGIN"
+			size_hint: .66, 0.065
+			pos_hint: {"center_x":0.5, "center_y":0.18}
+			background_color: 0,0,0,0
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "login1"
+			canvas.before:
+				Color:
+					rgb: rgba(52, 0, 231, 255)
+
+				RoundedRectangle:
+					size: self.size
+					pos: self.pos
+					radius: [5]
+
+		Button: 
+			text: "SIGNUP"
+			size_hint: .66, 0.065
+			pos_hint: {"center_x":0.5, "center_y":0.09}
+			background_color: 0,0,0,0
+			color: rgba(52, 0, 231, 255)
+			on_release:
+				root.manager.transition.direction = "left"
+				root.manager.current = "signup"
+			canvas.before:
+				Color:
+					rgb: rgba(52, 0, 231, 255)
+
+				Line:
+					width: 1.2
+					rounded_rectangle: self.x, self.y, self.width, self.height, 5, 5, 5, 5, 100
+

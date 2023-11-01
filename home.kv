@@ -1,0 +1,209 @@
+MDScreen:
+	name: "home"
+	BoxLayout:
+		orientation: "vertical"
+
+		MDTopAppBar:
+			id: menu_
+			pos_hint: {"top": 1}
+			title: "RING ENERGY"
+			elevation: 4
+
+		MDBottomNavigation:
+        	selected_color_background: "orange"
+        	
+			MDBottomNavigationItem:
+				name: "screen 1"
+				text: "Home"
+				icon: "home-account"
+				
+
+				MDLabel:
+					text: "Home screen. Under Maintenance"
+					halign: "center"
+
+			MDBottomNavigationItem:
+				name: "screen 2"
+				text: "Meter"
+				icon: "google-spreadsheet"
+
+
+
+				MDLabel:
+					text: "Records of daily meter readings, please add new readings here"
+					halign: "center"
+
+			MDBottomNavigationItem:
+				name: "screen 3"
+				text: "Loads"
+				icon: "devices"
+
+				MDFloatLayout:
+			        MDGridLayout:
+			            cols: 2
+			            spacing: "10dp"
+			            padding: "10dp"
+
+
+			            MDCard:
+			                orientation: "vertical"
+			                size_hint: None, None
+			                size: "150dp", "150dp"
+			                elevation: 4
+			                radius: [25]
+			                md_bg_color: "yellow"
+			                MDIconButton:
+			                    icon: "school-outline"
+			                    pos_hint: {"center_x": .5}
+			                MDLabel:
+			                    text: "Civil Labs"
+			                    halign: "center"
+			                    font_style: "H6"
+			                Widget:
+
+			                MDFillRoundFlatButton:
+			                    text: "View Loads"
+			                    pos_hint: {"center_x": .5}
+			                    font_size: "12dp"
+			                    md_bg_color: "red"
+
+			                Widget:
+
+			            MDCard:
+			                orientation: "vertical"
+			                size_hint: None, None
+			                size: "150dp", "150dp"
+			                elevation: 4
+			                radius: [25]
+			                md_bg_color:"yellow"
+			                MDIconButton:
+			                    icon: "wrench-outline"
+			                    pos_hint: {"center_x": .5}
+			                MDLabel:
+			                    text: "Welding Shop"
+			                    halign: "center"
+			                    font_style: "H6"
+			                Widget:
+
+			                MDFillRoundFlatButton:
+			                    text: "View Loads"
+			                    pos_hint: {"center_x": .5}
+			                    font_size: "12dp"
+			                    md_bg_color: "red"
+			                Widget:
+
+			            MDCard:
+			                orientation: "vertical"
+			                size_hint: None, None
+			                size: "150dp", "150dp"
+			                md_bg_color:"yellow"
+			                elevation: 4
+			                radius: [25]
+			                MDIconButton:
+			                    icon: "car-outline"
+			                    pos_hint: {"center_x": .5}
+			                MDLabel:
+			                    text: "Transport Facility"
+			                    halign: "center"
+			                    font_style: "H6"
+			                Widget:
+
+			                MDFillRoundFlatButton:
+			                    text: "View Loads"
+			                    pos_hint: {"center_x": .5}
+			                    font_size: "12dp"
+			                    md_bg_color: "red"
+			                Widget:
+			                    
+
+			            MDCard:
+			                orientation: "vertical"
+			                size_hint: None, None
+			                size: "150dp", "150dp"
+			                md_bg_color:"yellow"
+			                elevation: 4
+			                radius: [25]
+			                MDIconButton:
+			                    icon: "library-outline"
+			                    pos_hint: {"center_x": .5}
+			                MDLabel:
+			                    text: "Tech Building"
+			                    halign: "center"
+			                    font_style: "H6"
+			                Widget:
+
+			                MDFillRoundFlatButton:
+			                    text: "View Loads"
+			                    pos_hint: {"center_x": .5}
+			                    font_size: "12dp"
+			                    md_bg_color: "red"
+			                Widget:
+			 
+			            MDCard:
+			                orientation: "vertical"
+			                size_hint: None, None
+			                size: "150dp", "150dp"
+			                md_bg_color:"yellow"
+			                elevation: 4
+			                radius: [25]
+			                MDIconButton:
+			                    icon: "hospital"
+			                    pos_hint: {"center_x": .5}
+			                MDLabel:
+			                    text: "Machine shop"
+			                    halign: "center"
+			                    font_style: "H6"
+			                Widget:
+
+			                MDFillRoundFlatButton:
+			                    text: "View Loads"
+			                    pos_hint: {"center_x": .5}
+			                    font_size: "12dp"
+			                    md_bg_color: "red"
+			                Widget:
+
+
+			            MDCard:
+			                orientation: "vertical"
+			                size_hint: None, None
+			                size: "150dp", "150dp"
+			                md_bg_color:"yellow"
+			                elevation: 4
+			                radius: [25]
+			                MDIconButton:
+			                    icon: "food-outline"
+			                    pos_hint: {"center_x": .5}
+			                MDLabel:
+			                    text: "Metal Shop"
+			                    halign: "center"
+			                    font_style: "H6"
+			                Widget:
+			               
+			                MDFillRoundFlatButton:
+			                    text: "View Loads"
+			                    pos_hint: {"center_x": .5}
+			                    font_size: "12dp"
+			                    md_bg_color: "red"
+			                Widget:
+
+
+			MDBottomNavigationItem:
+				name: "screen 4"
+				text: "Analysis"
+				icon: "book"
+
+				MDLabel:
+					text: "Audit Results for the power consumption"
+					halign: "center"
+
+
+			MDBottomNavigationItem:
+				name: "screen 5"
+				text: "Message"
+				icon: "message"
+
+				MDLabel:
+					text: "Talk to me"
+					halign: "center"
+					
+				
