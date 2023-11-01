@@ -1,6 +1,7 @@
 name: Build
 on:
   push:
+    braches: [main]
 
 jobs:
 # Build job. Builds app for Android with Buildozer
